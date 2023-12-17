@@ -23,7 +23,7 @@ This project delivers a user-friendly menu-driven tool to simplify workspace man
 
 ## Got Questions or Feedback?
 
-We're always happy to help! Contact us at [senthil3112000@gmail.com].
+ Contact me at [senthil3112000@gmail.com].
 
 
 
