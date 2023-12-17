@@ -1,12 +1,11 @@
 #!/bin/bash
-current_path=$(pwd)
- echo $current_path
  cd ../
- current_path=$(pwd)
 initial_directory=$(pwd)
-
+echo Current Directory: $initial_directory
 while true; do
+  echo "---------------------------"
   read -p "Enter the folder name: " FOLDER_NAME
+  echo "---------------------------"
 
   # Check if the folder exists
   if [ ! -d "$FOLDER_NAME" ]; then
@@ -27,8 +26,18 @@ while true; do
   cd "$target_directory" || exit 1
 
   # Apply the patch
-  git apply "$path/vip_debug.patch"
-  echo "VIP Debug Enabling Successful..."
+  git apply "$path/auto-mahi-workspace/dependencies/vip_debug.patch"
+
+# Check the exit status of the git apply command
+  if [ $? -eq 0 ]; then
+    echo "------------------------------"
+    echo "VIP Debug Enabling Successful"
+    echo "------------------------------"
+  else
+    echo "------------------------------"
+    echo "VIP Debug Enabling Unsuccessful"
+    echo "------------------------------"
+  fi
 
   # Pause for user input
   read -p "Press Enter to exit to Main Menu..."

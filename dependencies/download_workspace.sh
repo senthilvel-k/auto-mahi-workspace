@@ -1,9 +1,6 @@
 #!/bin/bash
- current_path=$(pwd)
- echo $current_path
  cd ../
  current_path=$(pwd)
- echo $current_path
  read -p "Enter the new folder name: " FOLDER_NAME
 
   if [[ -z "$FOLDER_NAME" ]]; then
