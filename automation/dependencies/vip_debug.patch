@@ -1,0 +1,13 @@
+diff --git a/app.debug.tool.arch3/src/debug_tool_comm.h b/app.debug.tool.arch3/src/debug_tool_comm.h
+index a9b3d71..9082b06 100644
+--- a/app.debug.tool.arch3/src/debug_tool_comm.h
++++ b/app.debug.tool.arch3/src/debug_tool_comm.h
+@@ -56,7 +56,7 @@ extern "C" {
+ 
+ #define DEBUG_UART_STATUS_DISABLED  (0)
+ #define DEBUG_UART_STATUS_ENABLED   (1)
+-#define DEBUG_UART_STATUS           DEBUG_UART_STATUS_DISABLED
++#define DEBUG_UART_STATUS           DEBUG_UART_STATUS_ENABLED
+ 
+ typedef enum
+ {
