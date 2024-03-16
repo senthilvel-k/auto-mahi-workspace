@@ -1,8 +1,7 @@
 @echo off
-setlocal enabledelayedexpansion
 
 :main_menu
-set /p variable_part=Enter the existing folder name to start Compilation: 
+set /p variable_part=Enter the exisiting folder name to start Compilation : 
 
 :: Construct the full path relative to the script location (going two levels up)
 set "target_directory=%~dp0..\..\%variable_part%\MAHINDRA_S220_MY24_VP\dc.app.scl.vip.sys\build"
@@ -12,8 +11,11 @@ if not exist "%target_directory%" (
     goto main_menu
 )
 
+
 :: Additional prompt for platform choice
 set /p platform_choice=Is it for S220 or S237? Enter 'S220' or 'S237': 
+
+
 
 :menu
 cls
